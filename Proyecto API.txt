@@ -1,0 +1,12 @@
+from flask import Flask, jsonify 
+
+app = Flask(_name_) 
+
+animales = ['Leon', 'Caballo', 'Perro','Elefante',]
+
+@app.route('/animales', methods=['GET']) 
+def obtener_animales():
+    return jsonify(animales)
+
+if _name_ == '_main_': 
+    app.run(debug=True)
